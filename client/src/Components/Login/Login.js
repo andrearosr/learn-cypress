@@ -70,7 +70,7 @@ function Login() {
           Submit
         </button>
         {error && (
-          <div className="Login-form-error" data-test="login-error">
+          <div className="error-message" data-test="login-error">
             {error}
           </div>
         )}

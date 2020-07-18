@@ -24,3 +24,8 @@ button {
   top: 20px;
   right: 20px;
 }
+
+.error-message {
+  margin: 10px 0 0;
+  color: #FF4136;
+}
