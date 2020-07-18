@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
-import api from '../../services/api';
+import React, { useState, useContext } from 'react';
+import { Redirect } from 'react-router-dom';
+import Context from '../../store/context';
 import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { globalState, globalDispatch } = useContext(Context);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    api.login(email, password);
+    const response = await fetch('http://localhost:9000/login', {
+      method: 'post',
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (response.ok) {
+      console.log('response ok')
+      globalDispatch({ type: 'LOGIN' });
+    } 
+  }
+
+  if (globalState.loggedIn) {
+    return <Redirect to="/jobs" />;
   }
 
   return (
