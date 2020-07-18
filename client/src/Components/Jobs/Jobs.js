@@ -15,7 +15,7 @@ function Jobs() {
         });
     }
     fetchJobs();
-  }, []);
+  }, [globalDispatch]);
 
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -50,8 +50,8 @@ function Jobs() {
               <p>{job.type}</p>
               <p><b>Posted at:</b> {formatDate(job.created_at)}</p>
               <p><b>Location:</b> {job.location}</p>
-              <p><b>Company:</b> <a href={job.company_url} target="_blank">{job.company}</a></p>
-              <p><a href={job.url} target="_blank">See full job listing</a></p>
+              <p><b>Company:</b><a href={job.company_url} target="_blank" rel="noopener noreferrer">{job.company}</a></p>
+              <p><a href={job.url} target="_blank" rel="noopener noreferrer">See full job listing</a></p>
             </div>
           </div>
         ))}
