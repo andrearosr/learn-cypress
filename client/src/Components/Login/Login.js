@@ -39,7 +39,7 @@ function Login() {
 
   return (
     <div className="Login">
-      <h1 data-test="login=title">
+      <h1 data-test="login-title">
         Log In
       </h1>
       <form className="Login-form" onSubmit={handleSubmit} noValidate>
