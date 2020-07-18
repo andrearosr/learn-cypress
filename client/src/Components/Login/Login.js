@@ -66,7 +66,7 @@ function Login() {
             />
           </label>
         </div>
-        <button type="submit">
+        <button type="submit" data-test="login-button">
           Submit
         </button>
         {error && (
