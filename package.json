@@ -4,7 +4,8 @@
   "description": "Sample Job listing app meant for diving into Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "install": "cd client && npm install && cd ../api && npm install"
   },
   "repository": {
     "type": "git",
