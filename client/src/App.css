@@ -1,6 +1,7 @@
 .App {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, rgba(33,192,231,1) 0%, rgba(130,245,198,1) 50%, rgba(204,255,228,1) 100%)
 }

@@ -7,14 +7,18 @@ const reducer = function(state, action) {
         ...state,
         loggedIn: true,
       };
+    case 'FETCH_JOBS_SUCCESS':
+      return {
+        ...state,
+        jobs: action.payload,
+      };
     default:
       return state;
   };
 };
 
 const useGlobalState = () => {
-  const [globalState, globalDispatch] = useReducer(reducer, { loggedIn: false });
-
+  const [globalState, globalDispatch] = useReducer(reducer, { loggedIn: false, jobs: [] });
   return { globalState, globalDispatch };
 }
 

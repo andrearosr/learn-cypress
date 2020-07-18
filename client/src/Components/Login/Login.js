@@ -27,7 +27,9 @@ function Login() {
 
   return (
     <div className="Login">
-      Log In
+      <h1 data-test="login=title">
+        Log In
+      </h1>
       <form className="Login-form" onSubmit={handleSubmit} noValidate>
         <div className="Login-form-fields">
           <label>

@@ -1,0 +1,107 @@
+.Jobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.Jobs-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Jobs-job {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.Jobs-job-logo {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.Jobs-job-info {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Jobs-job-info h3 {
+  margin: 0 0 10px;
+}
+
+.Jobs-job-info p {
+  margin: 5px 0;
+}
+
+/* Loader stuff, taken from https://projects.lukehaas.me/css-loaders/ */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
