@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import api from '../../services/api';
 import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    api.login(email, password);
+  }
+
   return (
     <div className="Login">
       Log In
-      <form className="Login-form" noValidate>
+      <form className="Login-form" onSubmit={handleSubmit} noValidate>
         <div className="Login-form-fields">
           <label>
             Email
