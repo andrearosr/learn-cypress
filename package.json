@@ -1,0 +1,24 @@
+{
+  "name": "learn-cypress",
+  "version": "1.0.0",
+  "description": "Sample Job listing app meant for diving into Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrearosr/learn-cypress.git"
+  },
+  "keywords": [
+    "cypress",
+    "example",
+    "demo"
+  ],
+  "author": "Andrea Rosales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrearosr/learn-cypress/issues"
+  },
+  "homepage": "https://github.com/andrearosr/learn-cypress#readme"
+}
