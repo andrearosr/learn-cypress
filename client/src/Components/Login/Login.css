@@ -21,13 +21,6 @@
   align-items: flex-end;
 }
 
-.Login-form-button {
-  height: 40px;
-  width: 100px;
-  border-radius: 5px;
-  border-width: 1px;
-}
-
 .Login-input {
   width: 300px;
   border-radius: 5px;

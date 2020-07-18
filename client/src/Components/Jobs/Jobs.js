@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 import Context from '../../store/context';
 import "./Jobs.css";
 
@@ -25,9 +26,20 @@ function Jobs() {
     return `${dayOfMonth} / ${month} / ${year}`;
   }
 
+  function handleLogout() {
+    globalDispatch({ type: 'LOGOUT' });
+  }
+
+  if (!globalState.loggedIn) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className="Jobs">
       <h1 data-test="jobs-title">Jobs</h1>
+      <button type="button" onClick={handleLogout} className="logout-button">
+        Log out
+      </button>
       {!globalState.jobs.length && <div className="loader" />}
       <div className="Jobs-list">
         {globalState.jobs.map(job => (

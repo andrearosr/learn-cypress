@@ -16,7 +16,6 @@ function Login() {
     });
 
     if (response.ok) {
-      console.log('response ok')
       globalDispatch({ type: 'LOGIN' });
     } 
   }
@@ -54,7 +53,7 @@ function Login() {
             />
           </label>
         </div>
-        <button type="submit" className="Login-form-button">
+        <button type="submit">
           Submit
         </button>
       </form>
