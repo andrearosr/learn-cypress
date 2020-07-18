@@ -16,7 +16,7 @@
   align-items: center;
   margin: 10px;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid #111111;
   border-radius: 5px;
   width: 100%;
   max-width: 1200px;
@@ -28,7 +28,7 @@
   width: 100px;
   height: 100px;
   margin: 20px;
-  border: 2px solid black;
+  border: 2px solid #111111;
   border-radius: 50%;
   object-fit: contain;
 }

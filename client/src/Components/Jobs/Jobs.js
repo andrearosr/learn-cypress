@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 import Context from '../../store/context';
 import "./Jobs.css";
 
@@ -14,7 +15,7 @@ function Jobs() {
         });
     }
     fetchJobs();
-  }, []);
+  }, [globalDispatch]);
 
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -25,9 +26,20 @@ function Jobs() {
     return `${dayOfMonth} / ${month} / ${year}`;
   }
 
+  function handleLogout() {
+    globalDispatch({ type: 'LOGOUT' });
+  }
+
+  if (!globalState.loggedIn) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className="Jobs">
       <h1 data-test="jobs-title">Jobs</h1>
+      <button type="button" onClick={handleLogout} className="logout-button">
+        Log out
+      </button>
       {!globalState.jobs.length && <div className="loader" />}
       <div className="Jobs-list">
         {globalState.jobs.map(job => (
@@ -38,8 +50,8 @@ function Jobs() {
               <p>{job.type}</p>
               <p><b>Posted at:</b> {formatDate(job.created_at)}</p>
               <p><b>Location:</b> {job.location}</p>
-              <p><b>Company:</b> <a href={job.company_url} target="_blank">{job.company}</a></p>
-              <p><a href={job.url} target="_blank">See full job listing</a></p>
+              <p><b>Company:</b><a href={job.company_url} target="_blank" rel="noopener noreferrer">{job.company}</a></p>
+              <p><a href={job.url} target="_blank" rel="noopener noreferrer">See full job listing</a></p>
             </div>
           </div>
         ))}

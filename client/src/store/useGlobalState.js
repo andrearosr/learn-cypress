@@ -2,10 +2,15 @@ import { useReducer } from 'react';
 
 const reducer = function(state, action) {
   switch (action.type) {
-    case "LOGIN":
+    case 'LOGIN':
       return {
         ...state,
         loggedIn: true,
+      };
+    case 'LOGOUT':
+      return {
+        ...state,
+        loggedIn: false,
       };
     case 'FETCH_JOBS_SUCCESS':
       return {
