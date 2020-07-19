@@ -5,8 +5,8 @@ import {
   Route,
 } from "react-router-dom";
 import Context from './store/context';
-import { Login } from './components/Login';
-import { Jobs } from './components/Jobs';
+import { Login } from './Login';
+import { Jobs } from './Jobs';
 import './App.css';
 
 function App() {
